@@ -7,9 +7,9 @@ app = Flask(__name__)
 
 model = pickle.load(open("predictor.pkl", "rb"))
 
-@app.route('/home')
+@app.route('/')
 def home():
-    return f'hello world'
+    return 'hello world'
 
 @app.route('/predict',methods=['GET'])
 def predict():
